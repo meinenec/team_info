@@ -17,7 +17,6 @@ get '/table/opponents' do
     while line = list.gets  
       line = line.gsub(/ /,"_")
       new = query("teams/#{line.gsub(/\n/,"").downcase}.txt")
-      puts new
       @data << new
       @tname[new] = line.gsub(/\n/,"").gsub(/_/," ")
     end  
