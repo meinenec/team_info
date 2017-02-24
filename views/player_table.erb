@@ -1,0 +1,32 @@
+<table border = 1px width = 100%>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      QM
+    </td>
+    <td>
+      HL
+    </td>
+    <td>
+      TL
+    </td>
+    <td>
+      UD
+    </td>
+    <td>
+      URL
+    </td>
+  </tr>
+  <% @data.each do |row| %>
+    <tr>
+      <% row.each do |elem| %>
+        <td>
+          <% puts elem %>
+          <%= elem %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,35 @@
+<% @data.each do |team| %>
+  <%= "<br>#{@tname[team]}\n" %>
+  <table border = 1px width = 100%>
+  <tr>
+    <td width=100px>
+      Name
+    </td>
+    <td width=100px>
+      QM
+    </td>
+    <td width=100px>
+      HL
+    </td>
+    <td width=100px>
+      TL
+    </td>
+    <td width=100px>
+      UD
+    </td>
+    <td width=100px>
+      URL
+    </td>
+  </tr>
+  <% team.each do |row| %>
+    <tr>
+      <% row.each do |elem| %>
+        <td>
+          <% puts elem %>
+          <%= elem %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+  </table>
+<% end %>
